@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Mass Unliker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Instagram<br />Mass Unliker</h1>
+      <p class="subtitle">Fully automatic: select 100 → unlike → repeat</p>
+
+      <div id="status-section" class="status-section">
+        <div class="status-badge" id="status-badge">
+          <span class="dot" id="status-dot"></span>
+          <span id="status-text">Idle</span>
+        </div>
+        <div class="counter">
+          <span id="unlike-count">0</span>
+          <span class="counter-label">posts unliked</span>
+        </div>
+      </div>
+
+      <div class="settings">
+        <label>
+          Delay between clicks (ms):
+          <input type="number" id="delay-input" value="300" min="100" max="2000" step="50" />
+        </label>
+        <p class="hint">Speed of selecting posts. 200-500ms works well.</p>
+      </div>
+
+      <div class="actions">
+        <button id="start-btn" class="btn btn-start">&#9654; Start Auto Unlike</button>
+        <button id="stop-btn" class="btn btn-stop" disabled>&#9632; Stop</button>
+        <button id="reset-btn" class="btn btn-reset">&#8635; Reset</button>
+      </div>
+
+      <div class="instructions">
+        <h3>How to use:</h3>
+        <ol>
+          <li>Log in to <a href="https://www.instagram.com" target="_blank">instagram.com</a></li>
+          <li>Go to <a href="https://www.instagram.com/your_activity/interactions/likes/" target="_blank">Your Activity &rarr; Likes</a></li>
+          <li>Click <strong>Start Auto Unlike</strong> above</li>
+          <li>The extension will select 100 posts, click Unlike, and repeat automatically!</li>
+          <li>Keep the tab open — it runs by itself</li>
+          <li>Click <strong>Stop</strong> anytime to pause</li>
+        </ol>
+      </div>
+
+      <p class="warning">&#9888; Fully automatic. Runs in batches of 100. Use at your own risk — may trigger Instagram rate limits.</p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
